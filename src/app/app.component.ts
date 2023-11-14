@@ -19,3 +19,13 @@ export class AppComponent implements OnInit, OnDestroy{
     console.log('AppComponent.ngOnDestroy()')
   }
 }
+
+export interface LessonPackage {
+  title: string;
+  description: string;
+  category: string;
+  level: string;
+  prerequisite: string[];
+  tags: string[];
+  copyright: string;
+}
