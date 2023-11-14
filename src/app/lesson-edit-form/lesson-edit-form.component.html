@@ -51,6 +51,12 @@
     <br>
 
     <div class="row">
-        <button type="button" class="btn btn-primary">Submit</button>
+        <button type="button" class="btn btn-primary" [routerLink]="['/lesson', 1234]">Detail for lesson 1234</button>
+    </div>
+
+    <br>
+
+    <div class="row">
+        <button type="button" class="btn btn-primary" (click)="onClickSubmit()">Submit</button>
     </div>
 </div>
