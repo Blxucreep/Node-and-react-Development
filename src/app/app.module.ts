@@ -11,6 +11,10 @@ import { LessonEditFormComponent } from './lesson-edit-form/lesson-edit-form.com
 import { LessonSearchPageComponent } from './lesson-search-page/lesson-search-page.component';
 import { MenuNavBarComponent } from './menu-nav-bar/menu-nav-bar.component';
 
+import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,9 +28,14 @@ import { MenuNavBarComponent } from './menu-nav-bar/menu-nav-bar.component';
     NgbModule,
 
     FormsModule,
- ChipsModule
+    ChipsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(faIconLibrary: FaIconLibrary) {
+    faIconLibrary.addIconPacks(fas, far);
+  }
+}

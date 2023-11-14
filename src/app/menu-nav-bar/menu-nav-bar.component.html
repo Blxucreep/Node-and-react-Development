@@ -5,7 +5,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link">Home</a>
+                    <a class="nav-link" routerLink="/"><fa-icon [icon]="['fas', 'home']"/> Home</a>
                 </li>
 
                 <li ngbDropdown class="nav-item">
@@ -15,6 +15,7 @@
                         <a class="dropdown-item" href="#">Import...</a>
                         <a class="dropdown-item" href="#">New...</a>
                         <a class="dropdown-item" href="#">Export...</a>
+                        <a class="dropdown-item" routerLink="/lesson-edit-form">Lesson edit form...</a>
                     </div>
                 </li>
   
