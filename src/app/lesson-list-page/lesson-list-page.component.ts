@@ -1,4 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
+import {UserSettingsService} from "../user-settings.service";
 
 @Component({
   selector: 'app-lesson-list-page',
@@ -6,13 +7,17 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./lesson-list-page.component.css']
 })
 export class LessonListPageComponent implements OnInit, OnDestroy {
- constructor() {
- console.log("LessonListPageComponent.constructor()");
- }
- ngOnInit(): void {
- console.log("LessonListPageComponent.ngOnInit()");
- }
- ngOnDestroy(): void {
- console.log("LessonListPageComponent.ngOnDestroy()");
- }
+  constructor(private userSettingsService: UserSettingsService) {
+    console.log("get lastLessonId:", userSettingsService.lastLessonId);
+
+    console.log("LessonListPageComponent.constructor()");
+  }
+
+  ngOnInit(): void {
+    console.log("LessonListPageComponent.ngOnInit()");
+  }
+
+  ngOnDestroy(): void {
+    console.log("LessonListPageComponent.ngOnDestroy()");
+  }
 }
