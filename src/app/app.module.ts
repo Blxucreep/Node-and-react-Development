@@ -20,6 +20,7 @@ import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { LessonDetailPageComponent } from './lesson-detail-page/lesson-detail-page.component';
+import { TestPage1Component } from './test-page1/test-page1.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { LessonDetailPageComponent } from './lesson-detail-page/lesson-detail-pa
     LessonSearchPageComponent,
     MenuNavBarComponent,
     LessonListPageComponent,
-    LessonDetailPageComponent
+    LessonDetailPageComponent,
+    TestPage1Component,
   ],
   imports: [
     BrowserModule,
