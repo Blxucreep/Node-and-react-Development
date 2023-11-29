@@ -1,4 +1,5 @@
 <H1>Test page1</H1>
 
 <button type="button" class="btn btn-outline-primary" (click)="onClickIncrementValue()">Increment</button><br>
-numberValue: {{numberValue}}
+<input disabled="true" [value]="numberValue"><br><br>
+<input [value]="numberValue" (input)="onInputChanged($event)">

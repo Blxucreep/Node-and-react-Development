@@ -11,4 +11,8 @@ export class TestPage1Component {
   onClickIncrementValue() {
     this.numberValue++;
    }   
+
+   onInputChanged($event: Event) {
+    this.numberValue = +(<HTMLInputElement> $event.target).value;
+   }
 }
