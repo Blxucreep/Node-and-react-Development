@@ -1,62 +1,32 @@
 <div class="container">
-    <div class="row">
-        <div class="col-md-3">Title:</div>
-        <div class="col-md-9">
-            <input type="text" id="title" name="title" class="form-control rounded" />
+    <div class="row mt-2">
+        <label class="col-md-1" for="title">Title</label>
+        <input id="title" type="text" class="col-md-5" placeholder="Enter title" [(ngModel)]="model.title">
+    </div>
+    <div class="row mt-2">
+        <label class="col-md-1" for="description">Description</label>
+        <textarea id="description" class="col-11" rows="4" placeholder="Enter description" [(ngModel)]="model.description"></textarea>
+    </div>
+    <div class="row mt-2">
+        <label class="col-md-1" for="category">Category</label>
+        <input id="category" type="text" class="col-md-2" placeholder="Enter category" [(ngModel)]="model.category">
+        <label class="col-md-1" for="level" ngbTooltip="Enter value between 1(basics) to 10(advanced)" placement="top">Level</label>
+        <input id="level" type="number" class="col-md-1" min="1" max="10" placeholder="Enter level" [(ngModel)]="model.level">
+        <label class="col-md-1" for="prerequisites">Prerequisite</label>
+        <input id="prerequisites" type="text" class="col-md-6" placeholder="Enter prerequisite" [(ngModel)]="model.prerequisite">
+    </div>
+    <div class="row mt-2">
+        <label class="col-md-1" for="tags" ngbTooltip="Enter tags, separated by commas" placement="top">Tags</label>
+        <input id="tags" type="text" class="col-md-11" placeholder="Enter tags" [(ngModel)]="model.tags">
+    </div>
+    <div class="row mt-1">
+        <label class="col-md-1" for="license">License</label>
+        <input id="license" type="text" class="col-md-5" placeholder="Enter license" [(ngModel)]="model.copyright">
+    </div>
+    <div class="row mt-2">
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-primary">Submit</button>
         </div>
-    </div>
-  
-    <div class="row">
-        <div class="col-md-3">Description:</div>
-        <div class="col-md-9">
-            <input id="description" name="description" class="form-control rounded" />
-        </div>
-    </div>
-  
-    <div class="row">
-        <div class="col-md-3">Category:</div>
-        <div class="col-md-9">
-            <input type="text" id="category" name="category" class="form-control rounded" />
-        </div>
-    </div>
-  
-    <div class="row">
-        <div class="col-md-3">Level:</div>
-        <div class="col-md-9">
-            <input type="text" id="level" name="level" class="form-control rounded" />
-        </div>
-    </div>
-  
-    <div class="row">
-        <div class="col-md-3">Prerequisite:</div>
-        <div class="col-md-9">
-            <input type="text" id="prerequisite" name="prerequisite" class="form-control rounded" />
-        </div>
-    </div>
-  
-    <div class="row">
-        <div class="col-md-3">Tags:</div>
-        <div class="col-md-9">
-            <input type="text" id="tags" name="tags" class="form-control rounded" />
-        </div>
-    </div>
-  
-    <div class="row">
-        <div class="col-md-3">Copyright:</div>
-        <div class="col-md-9">
-            <input type="text" id="copyright" name="copyright" class="form-control rounded" />
-        </div>
-    </div>
-
-    <br>
-
-    <div class="row">
-        <button type="button" class="btn btn-primary" [routerLink]="['/lesson', 1234]">Detail for lesson 1234</button>
-    </div>
-
-    <br>
-
-    <div class="row">
-        <button type="button" class="btn btn-primary" (click)="onClickSubmit()">Submit</button>
     </div>
 </div>

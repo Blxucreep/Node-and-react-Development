@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import {Router} from "@angular/router";
-import {UserSettingsService} from "../user-settings.service";
+import { Router } from "@angular/router";
+import { UserSettingsService } from "../user-settings.service";
+import { LessonPackage } from '../app.component';
 
 @Component({
   selector: 'app-lesson-edit-form',
@@ -11,11 +12,10 @@ export class LessonEditFormComponent {
   constructor(private router: Router, private userSettingsService: UserSettingsService) {
 
   }
+
+  model: LessonPackage = { title: '', description: '', category: '', level: 1, prerequisite: [], tags: [], copyright: ''};
   
   onClickSubmit() {
-    this.userSettingsService.lastLessonId = 1234;
-    
-    // could execute code (send save request to server)... then navigate
-    this.router.navigate(['lesson-list']).then(res => {})
+    console.log('form values to save to server', this.model);
   }
 }
