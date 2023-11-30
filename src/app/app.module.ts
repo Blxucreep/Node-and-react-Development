@@ -15,12 +15,12 @@ import { LessonEditFormComponent } from './lesson-edit-form/lesson-edit-form.com
 import { LessonSearchPageComponent } from './lesson-search-page/lesson-search-page.component';
 import { MenuNavBarComponent } from './menu-nav-bar/menu-nav-bar.component';
 import { LessonListPageComponent } from './lesson-list-page/lesson-list-page.component';
+import { LessonDetailPageComponent } from './lesson-detail-page/lesson-detail-page.component';
+import { TestPage1Component } from './test-page1/test-page1.component';
 
 import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
-import { LessonDetailPageComponent } from './lesson-detail-page/lesson-detail-page.component';
-import { TestPage1Component } from './test-page1/test-page1.component';
 
 @NgModule({
   declarations: [
