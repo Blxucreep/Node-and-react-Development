@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from "@angular/router";
-import { UserSettingsService } from "../user-settings.service";
-import { LessonPackage } from '../app.component';
+import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-lesson-edit-form',
@@ -9,13 +7,27 @@ import { LessonPackage } from '../app.component';
   styleUrls: ['./lesson-edit-form.component.css']
 })
 export class LessonEditFormComponent {
-  constructor(private router: Router, private userSettingsService: UserSettingsService) {
+  lessonForm: FormGroup;
 
+  constructor(formBuilder: FormBuilder) {
+    this.lessonForm = formBuilder.group({
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      category: [''],
+      level: [''],
+      prerequisite: [''],
+      tags: [''],
+      copyright: ['']
+    });
   }
-
-  model: LessonPackage = { title: '', description: '', category: '', level: 1, prerequisite: [], tags: [], copyright: ''};
   
   onClickSubmit() {
-    console.log('form values to save to server', this.model);
+    if (this.lessonForm.valid) {
+      const formData = this.lessonForm.value;
+      console.log('Form data submitted:', formData);
+    }
+    else {
+      console.log('Form is invalid. Please check the required fields.');
+    }
   }
 }

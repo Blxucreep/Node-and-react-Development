@@ -1,4 +1,4 @@
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ChipsModule } from 'primeng/chips';
 
@@ -44,6 +44,7 @@ import { NumberEditComponent } from './number-edit/number-edit.component';
     NgbModule,
 
     FormsModule,
+    ReactiveFormsModule, // <= for supports FormGroup/FormBuilder
     ChipsModule,
     FontAwesomeModule
   ],
