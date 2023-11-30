@@ -21,6 +21,9 @@ import { TestPage1Component } from './test-page1/test-page1.component';
 import {FaIconLibrary, FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
+import { NumberDisplayComponent } from './number-display/number-display.component';
+import { NumberStepsComponent } from './number-steps/number-steps.component';
+import { NumberEditComponent } from './number-edit/number-edit.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { far } from '@fortawesome/free-regular-svg-icons';
     LessonListPageComponent,
     LessonDetailPageComponent,
     TestPage1Component,
+    NumberDisplayComponent,
+    NumberStepsComponent,
+    NumberEditComponent,
   ],
   imports: [
     BrowserModule,
